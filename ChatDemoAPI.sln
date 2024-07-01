@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatDemoAPI", "ChatDemoAPI\ChatDemoAPI.csproj", "{27E6CA79-5102-47B9-9422-5841CA990821}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatDemoAPI2", "ChatDemoAPI2\ChatDemoAPI2.csproj", "{CCBF4F3B-14B8-4E6E-B436-ECE4B76D5F5A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27E6CA79-5102-47B9-9422-5841CA990821}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27E6CA79-5102-47B9-9422-5841CA990821}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27E6CA79-5102-47B9-9422-5841CA990821}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27E6CA79-5102-47B9-9422-5841CA990821}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCBF4F3B-14B8-4E6E-B436-ECE4B76D5F5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCBF4F3B-14B8-4E6E-B436-ECE4B76D5F5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCBF4F3B-14B8-4E6E-B436-ECE4B76D5F5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCBF4F3B-14B8-4E6E-B436-ECE4B76D5F5A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F394D670-9D3D-410B-829C-AA56AC461F34}
+	EndGlobalSection
+EndGlobal
