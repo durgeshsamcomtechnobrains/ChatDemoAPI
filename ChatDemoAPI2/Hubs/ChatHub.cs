@@ -23,14 +23,10 @@ namespace ChatDemoAPI2.Hubs
         {
             if (Context.User.Identity.IsAuthenticated)
             {
-                string username = Context.User.Identity.Name;
-                UserHandler.ConnectedIds[username] = Context.ConnectionId;
+                string username = Context.User.Identity.Name;                
+                UserHandler.ConnectedIds[username] = Context.ConnectionId;                
             }
-            await base.OnConnectedAsync();
-
-            //string username = Context.User.Identity.Name;
-            //UserHandler.ConnectedIds[username] = Context.ConnectionId;
-            //return base.OnConnectedAsync();
+            await base.OnConnectedAsync();                        
         }
 
         //public override async Task OnDisconnectedAsync(Exception exception)

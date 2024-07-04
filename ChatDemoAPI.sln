@@ -5,7 +5,9 @@ VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatDemoAPI", "ChatDemoAPI\ChatDemoAPI.csproj", "{27E6CA79-5102-47B9-9422-5841CA990821}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatDemoAPI2", "ChatDemoAPI2\ChatDemoAPI2.csproj", "{CCBF4F3B-14B8-4E6E-B436-ECE4B76D5F5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatDemoAPI2", "ChatDemoAPI2\ChatDemoAPI2.csproj", "{CCBF4F3B-14B8-4E6E-B436-ECE4B76D5F5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRSample", "SignalRSample\SignalRSample.csproj", "{B89B1FC4-ACBF-4FE3-9547-2ECFBD8BE30D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{CCBF4F3B-14B8-4E6E-B436-ECE4B76D5F5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCBF4F3B-14B8-4E6E-B436-ECE4B76D5F5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCBF4F3B-14B8-4E6E-B436-ECE4B76D5F5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B89B1FC4-ACBF-4FE3-9547-2ECFBD8BE30D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B89B1FC4-ACBF-4FE3-9547-2ECFBD8BE30D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B89B1FC4-ACBF-4FE3-9547-2ECFBD8BE30D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B89B1FC4-ACBF-4FE3-9547-2ECFBD8BE30D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

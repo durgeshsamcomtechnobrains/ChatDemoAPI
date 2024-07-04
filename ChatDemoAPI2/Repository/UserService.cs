@@ -32,5 +32,10 @@ namespace ChatDemoAPI2.Repository
         {
             return await _context.registerUsers.FirstOrDefaultAsync(u => u.Email == Email && u.Password == password);
         }
+
+        public async Task<List<RegisterModel>> GetAllUsersAsync()
+        {
+            return await _context.registerUsers.ToListAsync();
+        }
     }
 }

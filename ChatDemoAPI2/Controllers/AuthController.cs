@@ -3,6 +3,7 @@ using ChatDemoAPI2.Model.Dtos;
 using ChatDemoAPI2.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using System.Collections.Concurrent;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -15,6 +16,7 @@ namespace ChatDemoAPI2.Controllers
     {
         private readonly IConfiguration _config;
         private readonly IUserService _userService;
+        private static ConcurrentDictionary<Guid, UserModel> LoggedInUsers = new ConcurrentDictionary<Guid, UserModel>();
 
         public AuthController(IUserService userService, IConfiguration config)
         {
@@ -54,10 +56,28 @@ namespace ChatDemoAPI2.Controllers
                     UserId = user.Id,
                     Email = user.EmailAddress
                 };
+
+                //add user to logged-in users list
+                LoggedInUsers[user.Id] = user;
+
                 return Ok(result);
             }
 
             return Unauthorized(new ServiceResult { Success = false, Message = "Invalid username or password" });
+        }
+
+        [HttpGet("loggedinusers")]
+        public IActionResult GetLoggedInUsers()
+        {
+            var users = LoggedInUsers.Values.ToList();
+            return Ok(users);
+        }
+
+        [HttpGet("allusers")]
+        public async Task<IActionResult> GetAllUsers()
+        {
+            var users = await _userService.GetAllUsersAsync();
+            return Ok(users);
         }
 
         private async Task<UserModel> Authenticate(UserLogin userLogin)

@@ -16,9 +16,9 @@ namespace ChatDemoAPI2.Controllers
         }
         [HttpGet("getAll")]
         public async Task<ActionResult<IEnumerable<RegisterModel>>> GetUsers()
-        {
-            var abc = await _context.registerUsers.ToListAsync();
-            return abc;
+        {            
+            var users = await _context.registerUsers.ToListAsync();
+            return users;
         }
         //public IActionResult GetAll()
         //{
