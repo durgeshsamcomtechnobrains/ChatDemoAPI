@@ -5,12 +5,13 @@ namespace SignalRSample.Hubs
 {
     public class UserHub : Hub
     {
-        public static int TotalView { get; set; } = 0;
+        public static int TotalViews { get; set; } = 0;
 
         public async Task NewWindowLoaded()
         {
-            TotalView++;
-            await Clients.All.SendAsync("updateTotalViews", TotalView);
+            TotalViews++;
+            //send update to all clients that total views have been updated
+            await Clients.All.SendAsync("updateTotalViews", TotalViews);
         }
     }
 }
