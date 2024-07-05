@@ -14,7 +14,8 @@ connectionUserCount.on("updateTotalUsers", (value) => {
 
 //invoke hub methods aka send notification to hub
 function newWindowLoadedOnClient() {
-    connectionUserCount.invoke("NewWindowLoaded").then((value) => console.log(value));
+    connectionUserCount.invoke("NewWindowLoaded", "SAMCOM").then((value) => console.log(value));
+    //connectionUserCount.send("NewWindowLoaded").then((value) => console.log(value));//when we use send we do not get any response from the server
 }
 
 //start connection
